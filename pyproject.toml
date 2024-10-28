@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "vehicle_domain_service"
+version = "0.1.6"
+description = ""
+authors = ["Brenden Price <price.brenden01@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "services" },
+    { include = "api" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+vehicle-domain = {path = "../vehicle-domain"}
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
